@@ -32,7 +32,7 @@ docker ps -a | fgrep swarm-manager
 echo finished configuring manager
 
 echo configuring agents...
-for agent_id in agent1 agent2
+for agent_id in manager agent1 agent2
 do
     eval $(docker-machine env $agent_id)
     docker run \
